@@ -1,1 +1,9 @@
-First project file
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+pool:
+  vmImage: 'Ubuntu-16.04' # other options: 'macOS-10.13', 'VS2017-Win2016'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6'
+    architecture: 'x64'
